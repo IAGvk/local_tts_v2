@@ -1,0 +1,118 @@
+site_name: local_tts_v2
+site_description: Production BFSI TTS pipeline — hexagonal ports & adapters architecture
+site_author: BFSI AI Team
+docs_dir: docs
+repo_name: local_tts_v2
+repo_url: https://github.com/your-org/local_tts_v2
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: google
+            show_source: true
+            show_root_heading: true
+            show_category_heading: true
+            members_order: source
+            separate_signature: true
+            show_signature_annotations: true
+            inherited_members: false
+            show_if_no_docstring: false
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Architecture:
+    - architecture/index.md
+    - Overview: architecture/overview.md
+    - Domain Layer: architecture/domain.md
+    - Ports: architecture/ports.md
+    - Adapters: architecture/adapters.md
+    - Decisions (ADRs):
+      - architecture/decisions/index.md
+      - "ADR-001: Hexagonal Architecture": architecture/decisions/001-hexagonal-architecture.md
+      - "ADR-002: Coqui Adapter Strategy": architecture/decisions/002-coqui-adapter-strategy.md
+      - "ADR-003: BFSI Text Normalisation": architecture/decisions/003-bfsi-text-normalisation.md
+  - API Reference:
+    - api/index.md
+    - Domain: api/domain.md
+    - Service: api/service.md
+    - Ports: api/ports.md
+    - Adapters: api/adapters.md
+  - Guides:
+    - Adding a TTS Adapter: guides/adding-a-tts-adapter.md
+    - Adding a BFSI Persona: guides/adding-a-persona.md
+    - Testing: guides/testing.md
+  - Operations:
+    - Runbook: operations/runbook.md
+    - Troubleshooting: operations/troubleshooting.md
+  - Knowledge Transfer:
+    - Onboarding: kt/onboarding.md
+    - Ownership Transfer Checklist: kt/ownership-transfer.md
+  - Changelog: changelog.md

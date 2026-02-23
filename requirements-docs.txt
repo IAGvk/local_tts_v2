@@ -1,0 +1,4 @@
+# Documentation dependencies
+# Install with: pip install -r requirements-docs.txt
+mkdocs-material>=9.5
+mkdocstrings[python]>=0.24
