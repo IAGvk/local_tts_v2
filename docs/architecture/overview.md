@@ -1,6 +1,6 @@
 # Architecture Overview
 
-`local_tts_v2` uses the **Hexagonal (Ports & Adapters)** pattern described by Alistair Cockburn (2005). The core idea: the business domain sits at the centre; all external dependencies (TTS models, file systems, audit sinks) attach at the perimeter via swappable adapters.
+`local_tts_v2` has used the **Hexagonal (Ports & Adapters)** pattern described by Alistair Cockburn (2005). The core idea: the business domain sits at the centre; all external dependencies (TTS models, file systems, audit sinks) attach at the perimeter via swappable adapters.
 
 ---
 
