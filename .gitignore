@@ -33,3 +33,6 @@ Thumbs.db
 # IDE
 .vscode/settings.json
 .idea/
+
+# MkDocs build output (deployed via CI, never committed)
+site/

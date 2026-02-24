@@ -1,4 +1,5 @@
 site_name: local_tts_v2
+site_url: https://IAGvk.github.io/local_tts_v2/
 site_description: Production BFSI TTS pipeline — hexagonal ports & adapters architecture
 site_author: BFSI AI Team
 docs_dir: docs
@@ -58,7 +59,10 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.snippets:
+      base_path: ["."]
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
